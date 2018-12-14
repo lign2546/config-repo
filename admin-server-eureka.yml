@@ -25,8 +25,8 @@ spring:
       client:
         instance:
           metadata:
-            user.name: admin
-            user.password: 123456
+            user.name: ${spring.security.user.name}
+            user.password: ${spring.security.user.password}
 
 logging:
   level:
