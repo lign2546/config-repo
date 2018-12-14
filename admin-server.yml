@@ -1,0 +1,19 @@
+server:
+  port: 21200
+
+spring:
+  application:
+    name: admin-server
+  cloud:
+    consul:
+      host: localhost
+      port: 8500
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      show-details: always

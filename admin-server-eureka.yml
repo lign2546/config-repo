@@ -1,0 +1,25 @@
+server:
+  port: 21200
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:21100/eureka
+    healthcheck:
+      enabled: true
+  instance:
+    prefer-ip-address: true
+    instance-id: ${spring.cloud.client.ip-address}:${server.port}
+
+spring:
+  application:
+    name: admin-server
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      show-details: always
