@@ -22,11 +22,6 @@ spring:
     admin:
       discovery:
           ignored-services: admin-server
-      client:
-        instance:
-          metadata:
-            user.name: ${spring.security.user.name}
-            user.password: ${spring.security.user.password}
 
 logging:
   level:
