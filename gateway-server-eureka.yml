@@ -1,13 +1,19 @@
 server:
   port: 20000
 
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:21100/eureka
+    healthcheck:
+      enabled: true
+  instance:
+    prefer-ip-address: true
+    instance-id: ${spring.cloud.client.id-address}:${server:port}
+
 spring:
   application:
     name: gateway-server
-  cloud:
-    consul:
-      host: localhost
-      port: 8500
   rabbitmq:
     host: localhost
     port: 5672
