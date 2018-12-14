@@ -8,12 +8,16 @@ spring:
     consul:
       host: localhost
       port: 8500
+  boot:
+    admin:
+      discovery:
+        ignored-services: consul
 
 logging:
   level:
     root: warn
     com.yupaits: info
-    
+
 management:
   endpoints:
     web:
