@@ -12,6 +12,12 @@ spring:
     admin:
       discovery:
         ignored-services: consul
+      client:
+        instance:
+          metadata:
+            user:
+              name: admin
+              password: 123456
   security:
     user:
       name: admin
