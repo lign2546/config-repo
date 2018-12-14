@@ -16,11 +16,11 @@ spring:
     admin:
       discovery:
         ignored-services: consul, admin-server
-      client:
-        instance:
-          metadata:
-            user.name: ${spring.security.user.name}
-            user.password: ${spring.security.user.password}
+      # client:
+      #   instance:
+      #     metadata:
+      #       user.name: ${spring.security.user.name}
+      #       user.password: ${spring.security.user.password}
 
 logging:
   level:
