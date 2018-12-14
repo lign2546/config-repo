@@ -26,13 +26,6 @@ spring:
   thymeleaf:
     cache: false
 
-security:
-  basic:
-    enabled: false
-  oauth2:
-    resource:
-      filter-order: 3
-
 logging:
   level:
     root: warn
