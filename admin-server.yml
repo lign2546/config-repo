@@ -17,8 +17,8 @@ spring:
       discovery:
         ignored-services: consul
       client:
-        username: ${spring.security.user.name}
-        password: ${spring.security.user.password}
+        username: admin
+        password: 123456
         instance:
           metadata:
             user.name: ${spring.security.user.name}
