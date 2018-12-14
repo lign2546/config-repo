@@ -31,6 +31,13 @@ spring:
       shutdown-timeout: 100ms
   thymeleaf:
     cache: false
+
+security:
+  basic:
+    enabled: false
+  oauth2:
+    resource:
+      filter-order: 3
       
 logging:
   level:
