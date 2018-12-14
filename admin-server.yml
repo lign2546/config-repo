@@ -1,5 +1,8 @@
 server:
   port: 21200
+  servlet:
+    session:
+      timeout: 5000
 
 spring:
   application:

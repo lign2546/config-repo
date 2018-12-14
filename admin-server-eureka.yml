@@ -1,5 +1,8 @@
 server:
   port: 21200
+  servlet:
+    session:
+      timeout: 5000
 
 eureka:
   client:
@@ -19,7 +22,7 @@ logging:
   level:
     root: warn
     com.yupaits: info
-    
+
 management:
   endpoints:
     web:
