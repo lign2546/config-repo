@@ -15,6 +15,11 @@ spring:
   application:
     name: admin-server
 
+logging:
+  level:
+    root: warn
+    com.yupaits: info
+    
 management:
   endpoints:
     web:

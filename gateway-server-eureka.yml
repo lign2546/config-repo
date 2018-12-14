@@ -20,6 +20,11 @@ spring:
     username: guest
     password: guest
 
+logging:
+  level:
+    root: warn
+    com.yupaits: info
+    
 management:
   endpoints:
     web:

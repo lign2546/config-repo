@@ -9,6 +9,11 @@ spring:
       host: localhost
       port: 8500
 
+logging:
+  level:
+    root: warn
+    com.yupaits: info
+    
 management:
   endpoints:
     web:
