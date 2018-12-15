@@ -9,9 +9,19 @@ spring:
       host: localhost
       port: 8500
     gateway:
-      discovery:
-        locator:
-          enabled: true
+      routes:
+        - id: service-shop
+          uri: lb://SERVICE-SHOP
+          predicates:
+            - Path=/shop/**
+          filters:
+            - StripPrefix=1
+        - id: service-order
+          uri: lb://SERVICE-ORDER
+          predicates:
+            - Path=/order/**
+          filters:
+            - StripPrefix=1
   sleuth:
     web:
       client:
