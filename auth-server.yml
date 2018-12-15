@@ -43,7 +43,7 @@ spring:
 
 logging:
   level:
-    root: info
+    root: warn
     com.yupaits: info
 
 management:
