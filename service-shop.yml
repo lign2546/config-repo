@@ -1,0 +1,39 @@
+server:
+  port: 20100
+
+spring:
+  application:
+    name: service-shop
+  cloud:
+    consul:
+      host: localhost
+      port: 8500
+  sleuth:
+    web:
+      client:
+        enabled: true
+    sampler:
+      probability: 1.0
+  zipkin:
+    enabled: true
+    sender:
+      type: RABBIT
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
+
+logging:
+  level:
+    root: warn
+    com.yupaits: info
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      show-details: always
