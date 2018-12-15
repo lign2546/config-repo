@@ -29,6 +29,21 @@ spring:
         max-wait: -1ms
         min-idle: 0
       shutdown-timeout: 100ms
+  sleuth:
+    web:
+      client:
+        enabled: true
+    sampler:
+      probability: 1.0
+  zipkin:
+    enabled: true
+    sender:
+      type: RABBIT
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
   thymeleaf:
     cache: false
       

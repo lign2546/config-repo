@@ -27,6 +27,11 @@ spring:
           metadata:
             user.name: ${spring.security.user.name}
             user.password: ${spring.security.user.password}
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
 
 logging:
   level:
