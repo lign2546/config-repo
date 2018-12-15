@@ -8,6 +8,10 @@ spring:
     consul:
       host: localhost
       port: 8500
+    gateway:
+      discovery:
+        locator:
+          enabled: true
   sleuth:
     web:
       client:
