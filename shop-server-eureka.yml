@@ -34,7 +34,7 @@ security:
   oauth2:
     resource:
       id: shop-server
-      user-info-uri: http://localhost:22000/auth/user
+      user-info-uri: http://localhost:22000/user
       prefer-token-info: false
 
 ribbon:
