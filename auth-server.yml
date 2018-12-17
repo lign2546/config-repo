@@ -1,7 +1,6 @@
 server:
   port: 22000
   servlet:
-    context-path: /auth
     session:
       cookie:
         name: auth.session
