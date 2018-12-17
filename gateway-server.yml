@@ -10,16 +10,10 @@ spring:
       port: 8500
     gateway:
       routes:
-        - id: service-shop
+        - id: shop-server
           uri: lb://SERVICE-SHOP
           predicates:
             - Path=/shop/**
-          filters:
-            - StripPrefix=1
-        - id: service-order
-          uri: lb://SERVICE-ORDER
-          predicates:
-            - Path=/order/**
           filters:
             - StripPrefix=1
   sleuth:

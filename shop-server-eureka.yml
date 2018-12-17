@@ -1,5 +1,5 @@
 server:
-  port: 20000
+  port: 23100
 
 eureka:
   client:
@@ -10,19 +10,10 @@ eureka:
   instance:
     prefer-ip-address: true
     instance-id: ${spring.cloud.client.ip-address}:${server.port}
-
+    
 spring:
   application:
-    name: gateway-server
-  cloud:
-    gateway:
-      routes:
-        - id: shop-server
-          uri: lb://SERVICE-SHOP
-          predicates:
-            - Path=/shop/**
-          filters:
-            - StripPrefix=1
+    name: shop-server
   sleuth:
     web:
       client:
@@ -39,11 +30,23 @@ spring:
     username: guest
     password: guest
 
+security:
+  oauth2:
+    resource:
+      id: shop-server
+      user-info-uri: http://localhost:22000/user
+      prefer-token-info: false
+
+ribbon:
+  eager-load:
+    enabled: true
+    clients: service-shop, service-order
+
 logging:
   level:
     root: warn
     com.yupaits: info
-    
+
 management:
   endpoints:
     web:
