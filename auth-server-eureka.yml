@@ -1,5 +1,6 @@
 server:
   port: 22000
+  context-path: /auth
   session:
     cookie:
       name: auth.session
