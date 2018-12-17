@@ -15,7 +15,7 @@ spring:
   boot:
     admin:
       discovery:
-        ignored-services: consul, admin-server
+        ignored-services: consul
       client:
         instance:
           metadata:
