@@ -31,11 +31,6 @@ security:
       user-info-uri: http://localhost:22000/user
       prefer-token-info: false
 
-ribbon:
-  eager-load:
-    enabled: true
-    clients: service-shop, service-order
-
 logging:
   level:
     root: warn

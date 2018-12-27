@@ -24,11 +24,6 @@ spring:
     username: guest
     password: guest
 
-ribbon:
-  eager-load:
-    enabled: true
-    clients: service-order
-    
 logging:
   level:
     root: warn
