@@ -8,6 +8,8 @@ spring:
     consul:
       host: localhost
       port: 8500
+      discovery:
+        hostname: 172.17.0.1
   sleuth:
     web:
       client:
